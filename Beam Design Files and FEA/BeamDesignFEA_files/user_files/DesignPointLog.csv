@@ -1,0 +1,12 @@
+﻿# 
+# This file contains the parameter values of the Design Points successfully updated by Ansys Workbench.
+# Project name: eeee
+# Creation date: 02/28/2024 19:49:17
+# 
+# 02/28/2024 19:49:17
+# The parameters defined in the project are:
+# ,P2 - Force Y Component [N],P1 - Force X Component [N]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P2,P1
+DP 0,0,0
