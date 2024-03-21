@@ -1,4 +1,5 @@
-﻿dp0/global/MECH/SYS.engd
+﻿dp0/global/MECH/SYS/Figures and Images/StaticFigure68.png
+dp0/global/MECH/SYS.engd
 dp0/global/MECH/SYS.mechdb
 dp0/SYS/DM/SYS.agdb
 dp0/SYS/ENGD/EngineeringData.xml
@@ -36,6 +37,7 @@ dp0/SYS/
 dp0/SYS-1/
 dp0/global/MECH/
 dp0/global/MECH/SYS/
+dp0/global/MECH/SYS/Figures and Images/
 dp0/SYS/DM/
 dp0/SYS/ENGD/
 dp0/SYS/MECH/
