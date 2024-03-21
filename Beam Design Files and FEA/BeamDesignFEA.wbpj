@@ -2,14 +2,15 @@
 <Storage>
   <Project Version="9.1">
     <base-designpoint-name valType="String">0</base-designpoint-name>
-    <timestamp-max valType="Int64">7808</timestamp-max>
+    <timestamp-max valType="Int64">7880</timestamp-max>
     <framework-build-version valType="String">23.2.142.0</framework-build-version>
     <external-version-string valType="String">2023 R2</external-version-string>
-    <last-saved-utc valType="String">03/18/2024 15:26:29</last-saved-utc>
+    <last-saved-utc valType="String">03/21/2024 01:25:19</last-saved-utc>
     <managed-categories valType="String">[report, misc, progress]</managed-categories>
     <logHistory valType="StringArray">
       <ArrayEntry Index="0">gigig@TRAPTOP:C:\Users\gigig\AppData\Local\Temp\WorkbenchLogs\CoreEvents20028.log</ArrayEntry>
       <ArrayEntry Index="1">gigig@TRAPTOP:C:\Users\gigig\AppData\Local\Temp\WorkbenchLogs\CoreEvents1948.log</ArrayEntry>
+      <ArrayEntry Index="2">gigig@GIGIGO-PC:C:\Users\gigig\AppData\Local\Temp\WorkbenchLogs\CoreEvents19896.log</ArrayEntry>
     </logHistory>
     <expression-scope-container valType="String">Parameters</expression-scope-container>
     <project-type valType="String">WB2</project-type>
@@ -147,7 +148,7 @@
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 7525, "Input": 1490, "Output": 1490}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 7877, "Input": 1490, "Output": 1490}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">false</contains-significant-data>
       <Object Name="/FileContainer/FileReference:F2" Version="1.0">
@@ -158,7 +159,7 @@
       <Object Name="/FileContainer/FileReference:F1" Version="1.0">
         <class-type valType="String">FileReference</class-type>
         <object-name valType="String">F1</object-name>
-        <member-data valType="String">{"DisplayText": "beam v2.step", "FileType": $$851462d6-c124-4a5c-beaa-cdd1b6d1a715, "DependentFiles": [], "ContainerAssociations": ["Geometry"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"C:\Users\gigig\Downloads\beam v2.step", "ReferenceCount": 1}</member-data>
+        <member-data valType="String">{"DisplayText": "beam v2.step", "FileType": $$851462d6-c124-4a5c-beaa-cdd1b6d1a715, "DependentFiles": [], "ContainerAssociations": ["Geometry"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"E:\Program Files (x86)\AER304-Beam-Bending-Lab\Beam Design Files and FEA\beam v2.step", "ReferenceCount": 1}</member-data>
       </Object>
       <Object Name="/FileContainer/FileReference:F9" Version="1.0">
         <class-type valType="String">FileReference</class-type>
@@ -183,7 +184,7 @@
       <Object Name="/FileContainer/FileReference:F7" Version="1.0">
         <class-type valType="String">FileReference</class-type>
         <object-name valType="String">F7</object-name>
-        <member-data valType="String">{"DisplayText": "act.dat", "FileType": $$8fd70577-5cb2-4fa6-b84a-f81888611505, "DependentFiles": [], "ContainerAssociations": [], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\act.dat", "ReferenceCount": 4}</member-data>
+        <member-data valType="String">{"DisplayText": "act.dat", "FileType": $$8fd70577-5cb2-4fa6-b84a-f81888611505, "DependentFiles": [], "ContainerAssociations": [], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\act.dat", "ReferenceCount": 5}</member-data>
       </Object>
       <Object Name="/FileContainer/FileReference:F8" Version="1.0">
         <class-type valType="String">FileReference</class-type>
@@ -433,7 +434,7 @@
       <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
       <deleted-sources valType="String">[]</deleted-sources>
       <last-updated valType="Int64">0</last-updated>
-      <last-modified-by-usage valType="String">{"Extrinsic": 7806, "Input": 1812, "Output": 1812}</last-modified-by-usage>
+      <last-modified-by-usage valType="String">{"Extrinsic": 7876, "Input": 1812, "Output": 1812}</last-modified-by-usage>
       <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
       <contains-significant-data valType="Boolean">false</contains-significant-data>
     </Container>
