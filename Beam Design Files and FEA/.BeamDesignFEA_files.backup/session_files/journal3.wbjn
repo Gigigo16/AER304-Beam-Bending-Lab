@@ -1,6 +1,0 @@
-# encoding: utf-8
-# 2023 R2
-SetScriptVersion(Version="23.2.142")
-fileReference1 = GetFileReference(Name="F1")
-fileReference1.Repair(FilePath="E:/Program Files (x86)/AER304-Beam-Bending-Lab/Beam Design Files and FEA/beam v2.step")
-Save(Overwrite=True)
