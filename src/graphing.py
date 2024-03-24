@@ -76,6 +76,7 @@ def DisplacementGraph(data: pd.DataFrame, test: str, save: bool):
 
     max_force = max(force)
     mf_ind = force.to_list().index(max_force)
+    # straight_ind = data['SG_2'].iloc[>0.2e-4]
 
     max_d = []
 
@@ -85,9 +86,9 @@ def DisplacementGraph(data: pd.DataFrame, test: str, save: bool):
         
         disp = -(data[s])
 
-        if s == 'MTS_d':
+        if s == 'Actual_LD':
             if test == 'AlBeam-3pnt':
-                disp = disp - disp[65]
+                disp = disp - disp[100]
             elif test == 'AlBeam-4pnt':
                 disp = disp - disp[0]
             else:
