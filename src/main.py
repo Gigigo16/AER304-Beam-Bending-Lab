@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import csv
 import pandas as pd
+import os
 
 # Custom Functions/libraies
 from graphing import *
@@ -70,7 +71,7 @@ eps3_xy = sig3_xy/E
 eps3_xy[:,200:-1] = -1*eps3_xy[:,200:-1]
 plt.contourf(xv, yv, eps3_xy, levels=50)
 
-plt.title(f'Al Beam: Shear Strain in 3-point Bending')
+plt.title(f'Al Beam: Transverse Strain in 3-point Bending')
 plt.ylabel('y (mm)')
 plt.xlabel('x (mm)')
 # plt.grid()
@@ -78,10 +79,10 @@ plt.ticklabel_format(axis='y', scilimits=[-3, 3])
 
 plt.gca().set_aspect('equal', adjustable='box')
 plt.colorbar()
-plt.show()
 
 os.makedirs(f'results/AlBeam-3pnt-graphs/', exist_ok=True)
-plt.savefig(f'results/AlBeam-3pnt-graphs/3pnt_shear_strain_disp.png')
+plt.savefig(f'results/AlBeam-3pnt-graphs/3pnt_trans_strain_disp.png')
+plt.show()
 
 
 
@@ -98,7 +99,7 @@ Q = b/2*(H**2/4 - yv**2)
 sig4_xy = max_F4/2 * Q/I/b
 eps4_xy = sig4_xy/E
 # eps4_xy[:,200:-1] = -1*eps4_xy[:,200:-1]
-plt.contourf(xv, yv, sig4_xy, levels=50)
+plt.contourf(xv, yv, eps4_xy, levels=50)
 
 plt.title(f'Al Beam: Transverse Strain in 4-point Bending')
 plt.ylabel('y (mm)')
@@ -108,10 +109,12 @@ plt.ticklabel_format(axis='y', scilimits=[-3, 3])
 
 plt.gca().set_aspect('equal', adjustable='box')
 plt.colorbar()
-plt.show()
 
 os.makedirs(f'results/AlBeam-4pnt-graphs/', exist_ok=True)
 plt.savefig(f'results/AlBeam-4pnt-graphs/4pnt_trans_strain_disp.png')
+plt.show()
+
+plt.clf()
 
 # plt.plot(x, M3)
 # plt.show()
