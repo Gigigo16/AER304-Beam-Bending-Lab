@@ -14,7 +14,6 @@ import os
 
 # Custom Functions/libraies
 from graphing import *
-from analysis import *
 
 # DEFINITIONS
 ########################
@@ -22,7 +21,7 @@ from analysis import *
 skip_rows = 22
 cols = ['time', 'MTS_F', 'MTS_d', 'LD', 'SG1', 'SG2', 'SG3', 'SG4', 'Actual_LD', 'unk1', 'unk2']
 
-test = 'AlBeam-3pnt'
+test = 'AlBeam-4pnt'
 
 # for reading to pd df
 file_path = f"Data\Labview Data\{test}.txt"
@@ -71,7 +70,7 @@ eps3_xy = sig3_xy/E
 eps3_xy[:,200:-1] = -1*eps3_xy[:,200:-1]
 plt.contourf(xv, yv, eps3_xy, levels=50)
 
-plt.title(f'Al Beam: Transverse Strain in 3-point Bending')
+plt.title(f'Al Beam: Shear Strain in 3-point Bending')
 plt.ylabel('y (mm)')
 plt.xlabel('x (mm)')
 # plt.grid()
@@ -93,15 +92,15 @@ slope = M_max/(60)
 Ma = M_max - slope*(abs(x)-140)
 Mb = [M_max for i in range(0,281)]
 M4 = np.concatenate((Ma[0:60], Mb, Ma[0:60][::-1]), axis=0)
-sig4_xx = -M4*yv/I
+sig4_xx = -1*M4*yv/I
 eps4_xx = sig4_xx/E
 Q = b/2*(H**2/4 - yv**2)
 sig4_xy = max_F4/2 * Q/I/b
 eps4_xy = sig4_xy/E
-# eps4_xy[:,200:-1] = -1*eps4_xy[:,200:-1]
+eps4_xy[:,200:-1] = -1*eps4_xy[:,200:-1]
 plt.contourf(xv, yv, eps4_xy, levels=50)
 
-plt.title(f'Al Beam: Transverse Strain in 4-point Bending')
+plt.title(f'Al Beam: Shear Strain in 4-point Bending')
 plt.ylabel('y (mm)')
 plt.xlabel('x (mm)')
 # plt.grid()
@@ -127,9 +126,9 @@ print("=========================================")
 
 save = True
 # StrainGraph(parsed_data, test_num, sensor, modulus, yield_strength, ultimate_strength, save)
-# if test.startswith('AlB'):
-#     StrainGraph(raw_data, test, save)
-DisplacementGraph(raw_data, test, save)
+if test.startswith('AlB'):
+    StrainGraph(raw_data, test, save)
+DisplacementGraph(raw_data, test, False)
 print("=========================================")
 
 # print("Saving Data CSVs...")

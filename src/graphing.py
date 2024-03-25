@@ -25,8 +25,19 @@ def StrainGraph(data: pd.DataFrame, test: str, save: bool):
     save : bool
         save graphs or not
     '''
+    pos = [28,5,40,65]
+    I = 1457918.40
+    E = 72000 
+    ind = [3, 1, 2, 4]  # for correcting the sequence
 
-    for n in range(1,5):
+        # 1-->3
+        # 2-->1
+        # 3-->2
+        # 4-->4
+    
+    for n in range(0,4):
+
+        i = ind[n]
 
         params = {'mathtext.default': 'regular' }          
         plt.rcParams.update(params)
@@ -34,22 +45,28 @@ def StrainGraph(data: pd.DataFrame, test: str, save: bool):
             
         print(" Generating " + test + " strain plots..")
 
-        strain = -(data[f'SG{n}'])
+        strain = (data[f'SG{n+1}'])
         force = -(data.MTS_F)
+        num = 2 if test.endswith('3pnt') else 4
+        e_xx_theor = -1*force*170*pos[n]/(num*E*I)
 
-        plt.plot(strain, force, color = 'r')
+        plt.plot(force, strain, color = 'r')
+        plt.plot(force, e_xx_theor)
 
         
-        plt.title(f'Al Beam, Gauge {n}: Force vs Strain')
-        plt.ylabel('MTS Force (N)')
-        plt.xlabel('Recorded Strain (mm/mm)')
+        plt.title(f'{test}, Gauge {i}: Strain vs Force')
+        plt.legend(['experimental','theoretical'])
+        plt.xlabel('MTS Force (N)')
+        plt.ylabel('Recorded Strain (mm/mm)')
+        # plt.gca().set_xlim(0, f_lim)
+        # plt.gca().set_ylim(5, 0)  
         plt.ticklabel_format(axis='x', scilimits=[-3, 3])
         plt.ticklabel_format(axis='y', scilimits=[-3, 3])
         plt.grid()
 
         if save:
             os.makedirs(f'results/{test}-graphs/', exist_ok=True)
-            plt.savefig(f'results/{test}-graphs/SG{n}_strain.png')
+            plt.savefig(f'results/{test}-graphs/SG{i}_strain.png')
         plt.show()
         plt.clf()
     
@@ -86,9 +103,9 @@ def DisplacementGraph(data: pd.DataFrame, test: str, save: bool):
         
         disp = -(data[s])
 
-        if s == 'Actual_LD':
+        if s == 'MTS_d':
             if test == 'AlBeam-3pnt':
-                disp = disp - disp[100]
+                disp = disp - disp[65]
             elif test == 'AlBeam-4pnt':
                 disp = disp - disp[0]
             else:
